@@ -1,7 +1,12 @@
+## Introduction
+
+This repo will validate whether your backend API services (REST/GQL/GRPC) execute well (pass/fail/disabled).
+It requires you to download the [csv report file](####CSV_REPORT_FILE) and identify the [query path services](####QUERY_LIST_FILE) from your team.
+
 ## How to Use
 
 ```bash
-python main.py [--csv-report-file {CSV_REPORT_FILE}] [--query-list {QUERY_LIST_FILE}] [--only-show-fail]
+python main.py [--csv-report-file {CSV_REPORT_FILE}] [--query-list {QUERY_LIST_FILE}] [--only-show-problem]
 ```
 
 #### CSV_REPORT_FILE
@@ -36,7 +41,7 @@ GetChannelWithInvalidUserID	mojito
 GetRecommendationProduct	mojito
 ```
 
-#### only-show-problems
+#### only-show-problem
 
 Use this argument if you want to only see the result that is not pass (either fail or not found).
 The default value is False (or displaying all result from the **QUERY_LIST_FILE**)

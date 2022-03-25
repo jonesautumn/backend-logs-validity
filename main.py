@@ -8,8 +8,9 @@ parser.add_argument('--csv-report-file', type=str, dest='csv_report_file',
                     default=constants.DEFAULT_CSV_REPORT_FILE)
 parser.add_argument('--query-list', type=str, dest='query_list',
                     default=constants.DEFAULT_QUERY_LIST_FILE)
-parser.add_argument('--only-show-fail', action=argparse.BooleanOptionalAction,
-                    dest='only_show_fail', default=False)
+parser.add_argument('--only-show-problem',
+                    action=argparse.BooleanOptionalAction,
+                    dest='only_show_problem', default=False)
 args = parser.parse_args()
 
 
@@ -39,7 +40,7 @@ lines = file.readlines()
 for line in lines:
     queryName, category = line.strip().split("\t")
     result = getDataResult(queryName, category)
-    if args.only_show_fail:
+    if args.only_show_problem:
         if result != 'Pass':
             cprint("{} - {}: {}".format(category, queryName, result),
                    getColorPrint(result))
