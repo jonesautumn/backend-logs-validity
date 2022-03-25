@@ -1,7 +1,7 @@
 ## Introduction
 
 This repo will validate whether your backend API services (REST/GQL/GRPC) execute well (pass/fail/disabled).
-It requires you to download the [csv report file](####CSV_REPORT_FILE) and identify the [query path services](####QUERY_LIST_FILE) from your team.
+It requires you to download the [csv report file](#csv_report_file) and identify the [query path services](#query_list_file) from your team.
 
 ## How to Use
 
