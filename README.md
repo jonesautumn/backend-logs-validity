@@ -5,14 +5,14 @@ It requires you to download the [csv report file](####CSV_REPORT_FILE) and ident
 
 ## How to Use
 
-To install requirements:
+```bash
+python main.py [--csv-report-file {CSV_REPORT_FILE}] [--query-list {QUERY_LIST_FILE}] [--only-show-problem]
+```
+
+You need to install several dependencies first. You can run the following code.
 
 ```bash
 pip install -r requirements.txt
-```
-
-```bash
-python main.py [--csv-report-file {CSV_REPORT_FILE}] [--query-list {QUERY_LIST_FILE}] [--only-show-problem]
 ```
 
 #### CSV_REPORT_FILE
